@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Page redirecting... | Wayde Tse</title>
+        <script type="text/javascript">
+            var path = location.pathname;
+            var arr = path.split('/');
+            while (true) {
+                last = arr.pop();
+                if (typeof last == 'string' && last != '') {
+                    var keyword = last;
+                    break;
+                }
+            }
+            if (keyword == 't') {
+                location.replace('http://waydetse.tumblr.com/');
+            }
+            else if (keyword == 'p' || keyword == 'waydetse') {
+                location.replace('https://github.com/waydetse/blog/issues');
+            }
+            else {
+                location.replace('http://cn.bing.com/search?q=Wayde+Tse+' + keyword);
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
